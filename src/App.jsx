@@ -19,7 +19,8 @@ import EleventhGradeNotes from './pages/EleventhGradeNotes';
 import TwelfthGradeNotes from './pages/TwelfthGradeNotes';
 import CollegePage from './pages/CollegePage';
 import { getDownloadURL,ref } from 'firebase/storage';
-import Footer from './components/footer';
+import Footer from './components/Footer';
+
 
 import About from './pages/About';
 import Privacy from './pages/Privacy';
