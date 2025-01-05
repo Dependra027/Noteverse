@@ -36,7 +36,7 @@ const CollegeNotes = () => {
   ];
 
   return (
-    <div className="school-notes" id="College-notes">
+    <div className="college-notes" id="college-notes">
       <h2 className="heading">College Notes<span style={{ color: 'green', fontSize: '20px' }}><br></br>(Engineering notes available only for the time )</span></h2>
       <div className="notes-container">
         {notes.map((note, index) => (

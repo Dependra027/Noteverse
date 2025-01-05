@@ -17,6 +17,11 @@ import EleventhGradeNotes from './pages/EleventhGradeNotes';
 import TwelfthGradeNotes from './pages/TwelfthGradeNotes';
 import CollegePage from './pages/CollegePage';
 import { getDownloadURL,ref } from 'firebase/storage';
+import Footer from './components/footer';
+import 'font-awesome/css/font-awesome.min.css';
+import About from './pages/About';
+import Privacy from './pages/Privacy';
+import Feedback from './pages/FeedBack';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -36,6 +41,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [username, setUsername] = useState('');
+  
   
   // Initialize AOS
   useEffect(() => {
@@ -102,8 +108,8 @@ function App() {
           <Route path="/" element={
             <>
               <div style={{ padding: '20px', color: '#fff' }} data-aos="fade-up">
-                <h1>Welcome to the Futuristic Notes Website</h1>
-                <p>Explore the future of learning and knowledge sharing.</p>
+                <h1>Welcome User!</h1>
+                <p>"Your Gateway to Smarter Learning – Notes for Every Step of Your Journey!"</p>
               </div>
               <div data-aos="fade-up">
                 <Hero />
@@ -124,10 +130,15 @@ function App() {
           <Route path="/12th" element={<TwelfthGradeNotes />} />
           <Route path="/upload" element={<UploadNotePage />} />
           <Route path="/Engineering" element={<CollegePage />} />
-
+          <Route path="/About" element={<About/>}/>
+          <Route path="/Privacy" element={<Privacy/>}/>
+          <Route path="/Feedback" element={<Feedback/>}/>
         </Routes>
       </main>
+      <Footer />
     </Router>
+    
+
   );
 }
 

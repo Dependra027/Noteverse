@@ -7,6 +7,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #0f0f0f;
+  padding-top: 60px; /* Adds space at the top to prevent the content from being hidden behind the fixed navbar */
 }
 
 .navbar {
@@ -14,8 +15,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(90deg, #00f260, #0575e6);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(40deg, #090909, #60c7f0c1, #090909);
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar is always on top */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
 }
 
 .navbar-logo h1 {
@@ -61,7 +67,6 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   display: block;
-  transition: background-color 0.2s ease-in-out;
 }
 
 .dropdown-content a:hover {
@@ -115,12 +120,16 @@ body {
   .navbar-links {
     display: none;
     flex-direction: column;
-    background-color: #0575e6;
+    background-color: rgba(4, 6, 8, 0.9);
     position: absolute;
     top: 60px;
     right: 0;
-    width: 100%;
+    padding: 10px;
+    width: 50%;
     text-align: center;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(241, 238, 238, 0.381);
   }
 
   .navbar-links.open {
@@ -133,7 +142,6 @@ body {
 
   .menu-toggle {
     display: block;
-   
   }
 }
 
@@ -155,7 +163,12 @@ body {
     font-size: 16px;
     padding: 10px 0;
   }
+
+  .navbar-links {
+    background-color: rgba(4, 6, 8, 0.85);
+  }
 }
+
 /* Category dropdown specific styles */
 .navbar-links .dropdown {
   position: relative;
@@ -164,20 +177,15 @@ body {
 .navbar-links .dropdown a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease-in-out;
-  position: relative;
-  padding: 10px 0;
+  font-size: 18px; 
+  padding: 15px 20px; 
 }
 
-/* Add a glowing neon border on hover */
 .navbar-links .dropdown a:hover {
-  color: #00f260;
-  box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.6), 0px 0px 15px rgba(0, 255, 255, 0.3);
-  border-radius: 5px;
+  color: #00f260; 
 }
 
-/* Dropdown Menu Styling */
+/* Simplified Dropdown Menu Styling (No extra effects) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -187,35 +195,25 @@ body {
   border: 1px solid #0575e6;
   border-radius: 8px;
   padding: 10px 0;
-  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  transform: translateY(-10px);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-  opacity: 1;
-  transform: translateY(0);
 }
 
-/* Styling individual dropdown items */
 .dropdown-content a {
-  padding: 10px 20px;
+  padding: 15px 30px;
   color: #fff;
   text-decoration: none;
   display: block;
-  transition: all 0.3s ease;
-  font-size: 16px;
+  font-size: 16px; 
   background: transparent;
-  border-left: 3px solid transparent;
 }
 
 .dropdown-content a:hover {
-  color: #00f260;
   background-color: rgba(0, 255, 255, 0.1);
-  border-left: 3px solid #00f260;
 }
 
 /* Dropdown Submenu Styling */
@@ -228,198 +226,4 @@ body {
   left: 100%;
   margin-left: 1px;
   background: rgba(15, 15, 15, 0.95);
-  box-shadow: 0px 8px 16px rgba(255, 0, 255, 0.3);
-}
-
-.dropdown-submenu a:hover {
-  color: #ff00ff;
-  border-left: 3px solid #ff00ff;
-}
-/* Category dropdown specific styles */
-.navbar-links .dropdown {
-  position: relative;
-}
-
-.navbar-links .dropdown a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px; /* Adjust font size for better visibility */
-  transition: color 0.3s ease-in-out;
-  position: relative;
-  padding: 15px 20px; /* Increase padding for larger click area */
-}
-
-/* Add a glowing neon border on hover */
-.navbar-links .dropdown a:hover {
-  color: #00f260;
-  box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.6), 0px 0px 15px rgba(0, 255, 255, 0.3);
-  border-radius: 5px;
-}
-
-/* Dropdown Menu Styling */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(15, 15, 15, 0.95);
-  border: 1px solid #0575e6;
-  border-radius: 8px;
-  padding: 15px 0; /* Increased padding for dropdown */
-  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  transform: translateY(-10px);
-  min-width: 200px; /* Set a minimum width for the dropdown */
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Styling individual dropdown items */
-.dropdown-content a {
-  padding: 15px 30px; /* Increased padding for larger items */
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  transition: all 0.3s ease;
-  font-size: 16px; /* Adjust font size for dropdown items */
-  background: transparent;
-  border-left: 3px solid transparent;
-}
-
-.dropdown-content a:hover {
-  color: #00f260;
-  background-color: rgba(0, 255, 255, 0.1);
-  border-left: 3px solid #00f260;
-}
-
-/* Dropdown Submenu Styling */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-content {
-  top: 0;
-  left: 100%;
-  margin-left: 1px;
-  background: rgba(15, 15, 15, 0.95);
-  box-shadow: 0px 8px 16px rgba(255, 0, 255, 0.3);
-}
-
-.dropdown-submenu a:hover {
-  color: #ff00ff;
-  border-left: 3px solid #ff00ff;
-}
-/* User Dropdown Container */
-.user-dropdown {
-  position: relative; /* Positioning for absolute elements inside */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  display: flex; /* Flexbox for alignment */
-  align-items: center; /* Center icon and text */
-  padding: 10px 15px; /* Padding for spacing */
-  color: #fff; /* Text color */
-  transition: background-color 0.3s ease; /* Smooth background transition */
-}
-
-/* User Icon */
-.user-icon {
-  margin-right: 8px; /* Space between icon and text */
-}
-
-/* Hover effect for the user dropdown */
-.user-dropdown:hover {
-  background-color: rgba(0, 255, 255, 0.1); /* Light background on hover */
-  border-radius: 5px; /* Rounded corners on hover */
-}
-
-/* User Menu Dropdown Styling */
-.user-menu {
-  display: none; /* Hide by default */
-  position: absolute; /* Absolute positioning */
-  top: 100%; /* Aligns below the dropdown */
-  right: 0; /* Aligns to the right */
-  background-color: rgba(15, 15, 15, 0.95); /* Background color */
-  border: 1px solid #0575e6; /* Border for visibility */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  z-index: 1000; /* Ensure it appears above other content */
-  list-style-type: none; /* Removes bullets */
-  padding: 0; /* Removes padding */
-  margin: 0; /* Removes margin */
-}
-
-/* Show user menu when dropdown is open */
-.user-dropdown:hover .user-menu,
-.user-menu.open {
-  display: block; /* Show the user menu on hover or if open */
-}
-
-/* User Menu Items Styling */
-.user-menu li {
-  padding: 10px 15px; /* Padding for spacing */
-  transition: background-color 0.3s ease; /* Transition for hover effect */
-}
-
-/* Link Styling within the User Menu */
-.user-menu li a {
-  color: #fff; /* Text color */
-  text-decoration: none; /* Remove underline */
-  font-size: 16px; /* Font size for items */
-}
-
-/* Hover effect for User Menu items */
-.user-menu li:hover {
-  background-color: rgba(0, 255, 255, 0.1); /* Light background on hover */
-}
-
-
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* Show on smaller screens */
-  }
-
-  .navbar-links {
-    display: none; /* Hide links by default */
-    flex-direction: column; /* Vertical stacking */
-    background-color: rgba(4, 6, 8, 0.9); /* Semi-transparent background */
-    position: absolute; /* Positioned for dropdown */
-    top: 60px; /* Below navbar */
-    right: 0; /* Align to the right */
-    width: 50%; /* Adjust width for dropdown */
-    text-align: center; /* Center-align links */
-    z-index: 1000; /* Above other content */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-  }
-
-  .navbar-links.open {
-    display: flex; /* Show menu when open */
-  }
-}
-
-/* Mobile Adjustments for Smaller Screens */
-@media (max-width: 480px) {
-  .menu-toggle {
-    top: 8px; /* Slightly adjust top space */
-    right: 8px; /* Slightly adjust right space */
-    padding: 4px; /* Smaller padding */
-    font-size: 20px; /* Adjust icon size */
-  }
-
-  .navbar-links a {
-    font-size: 14px; /* Smaller font size for links */
-    padding: 10px 0; /* Adjust link padding */
-  }
-
-  .navbar-links {
-    background-color: rgba(4, 6, 8, 0.85); /* Slightly more transparent for smaller screens */
-  }
 }

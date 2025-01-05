@@ -4,3 +4,23 @@ body{
   background-repeat: no-repeat; 
   background-attachment: fixed; 
 }
+#welcome {
+  display: inline-block;
+  font-size: 2rem;
+  color: #fff;
+  position: relative;
+}
+
+#welcome::after {
+  content: '|';
+  position: absolute;
+  right: -10px;
+  top: 0;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,122 @@
+/* General Footer Styles */
+.footer {
+    background: rgba(9, 9, 9, 0.7); 
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect to background content behind the footer */
+  }
+  
+  /* Optional: Add a gradient for a more stylized transparent effect */
+  
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    width: 30%;
+    margin-bottom: 2px;
+  }
+  
+  .footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffeb3b;
+  }
+  
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-column a:hover {
+    color: #ffeb3b;
+  }
+  
+  .footer-social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 icons per row */
+    gap: 10px; /* Space between icons */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the icons vertically */
+    margin: 10px auto; /* Center align within its container */
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.social-icon:hover {
+    color: #00f260; /* Change color on hover */
+}
+
+  
+  /* Footer Bottom */
+  .footer-bottom {
+   
+    padding-top: 5px;
+
+    border-top: 1px solid #4a684a;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+        flex-wrap: nowrap; /* Prevent wrapping to keep columns horizontal */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 10px; /* Reduce the gap between columns for compactness */
+        justify-content: flex-start; /* Align columns to the left */
+        padding-bottom: 10px; /* Add some space for scrollbars */
+    }
+  
+    .footer-column {
+     padding-left: 50px;
+        flex: 0 0 auto; /* Prevent columns from shrinking or wrapping */
+        width: auto; /* Allow columns to size based on their content */
+        text-align: center; /* Center-align the text in each column */
+        margin-bottom: 0; /* Remove extra margins for compactness */
+        
+    }
+  
+    .footer-column h3 {
+        font-size: 16px; /* Smaller font size for headers */
+    }
+  
+    .footer-column a {
+        font-size: 12px; /* Smaller font size for links */
+    }
+}
+
+  

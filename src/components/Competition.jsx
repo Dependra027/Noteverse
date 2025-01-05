@@ -35,7 +35,7 @@ const CompetitionNotes = () => {
   ];
 
   return (
-    <div className="school-notes" id="Competition-notes">
+    <div className="competition-notes" id="Competition-notes">
       <h2 className="heading">Competition Notes<span style={{ color: 'red', fontSize: '20px' }}><br></br>( Not operable for now )</span></h2>
 
       <div className="notes-container">
