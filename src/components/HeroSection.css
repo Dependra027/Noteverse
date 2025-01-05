@@ -157,21 +157,6 @@
   border: 2px solid #00f260;
   transition: all 0.3s ease;
 }
-
-@media (max-width: 768px) {
-  .hot-topics {
-    position: static; /* Removes absolute positioning */
-    margin: 20px ; /* Centers it below the hero section */
-    transform: none; /* Removes translate transformations */
-    max-width: 90%; /* Adjust width for smaller screens */
-   
-  }
-  .hero-section{
-    max-width: 90%;
-    width: 100%;
-  }
-}
-
 @media (max-width: 1024px) {
   .hot-topics {
     position: static; /* Remove absolute positioning */
@@ -210,3 +195,33 @@
     font-size: 0.8rem; /* Adjust paragraph size */
   }
 }
+
+@media (max-width: 768px) {
+  .hot-topics {
+    position: static; /* Removes absolute positioning */
+    margin: 20px auto; /* Centers the hot topics box below the hero section */
+    transform: none; /* Removes translate transformations */
+    max-width: 100%; /* Full width for small screens */
+
+    display: block; /* Stack items vertically */
+    
+    width: 90%; /* Full width */
+  }
+
+  .hero-section {
+    max-width: 90%;
+    width: 100%; /* Ensures full width */
+  }
+
+  .card {
+    width: 100%; /* Full width for each card on small screens */
+    margin-bottom: 15px; /* Adds space between stacked cards */
+  }
+  .hot-topics h3 {
+    text-align: center;
+    font-size: 1rem; /* Adjust heading size */
+    margin-bottom: 10px;
+  }
+
+}
+
