@@ -1,0 +1,172 @@
+.hero-section {
+  display: flex;
+  position: relative;
+  width: 75%;
+  
+  height: 500px;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom right, #1a1a1a, #333);
+  border: 2px solid #9bf3be;
+  margin-left: 20px;
+}
+
+.hero-slide {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.9;
+}
+
+.hero-slide:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.hero-content {
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1s ease-in-out;
+  
+}
+
+.hero-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00f260;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #ddd;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.hero-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.indicator.active {
+  background-color: #00f260;
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.4);
+}
+
+.hot-topics {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background: linear-gradient(to right, #1f1f1f, #333);
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid #00f260;
+}
+
+.hot-topics h3 {
+  color: #00f260;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 6px rgba(0, 255, 255, 0.5);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card h4 {
+  color: #00f260;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.hot-topics {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: linear-gradient(to right, #1f1f1f, #333);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 20%;
+  min-width: 220px;
+  width: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid #00f260;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hot-topics {
+    position: static; /* Removes absolute positioning */
+    margin: 20px auto; /* Centers it below the hero section */
+    transform: none; /* Removes translate transformations */
+    max-width: 90%; /* Adjust width for smaller screens */
+    width: 100%;
+  }
+  .hero-section{
+    max-width: 90%;
+    width: 100%;
+  }
+}
