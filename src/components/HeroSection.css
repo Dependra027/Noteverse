@@ -31,6 +31,7 @@
 }
 
 .hero-content {
+ 
   color: #fff;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
@@ -160,13 +161,52 @@
 @media (max-width: 768px) {
   .hot-topics {
     position: static; /* Removes absolute positioning */
-    margin: 20px auto; /* Centers it below the hero section */
+    margin: 20px ; /* Centers it below the hero section */
     transform: none; /* Removes translate transformations */
     max-width: 90%; /* Adjust width for smaller screens */
-    width: 100%;
+   
   }
   .hero-section{
     max-width: 90%;
     width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hot-topics {
+    position: static; /* Remove absolute positioning */
+    margin: 20px auto; /* Centers the hot topics box */
+    transform: none; /* Remove translate transformations */
+    max-width: 90%; /* Ensures it fits the screen */
+    width: 100%; /* Full width for the box */
+    display: flex; /* Horizontal alignment for content */
+    flex-direction: row; /* Ensure horizontal layout */
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Align items vertically */
+  }
+
+  .hero-section {
+    margin-bottom: 30px;
+  
+    width: 95%;
+     /* Add spacing below slider */
+  }
+
+  .hot-topics h3 {
+    font-size: 1rem; /* Adjust heading size */
+    margin-bottom: 0;
+  }
+
+  .card {
+    width: 45%; /* Shrink card width to fit */
+    margin: 0 10px; /* Space between cards */
+  }
+
+  .card h4 {
+    font-size: 0.9rem; /* Adjust title size */
+  }
+
+  .card p {
+    font-size: 0.8rem; /* Adjust paragraph size */
   }
 }

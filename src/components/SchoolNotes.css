@@ -1,60 +1,111 @@
-h2{
-    color: aliceblue;
-}
 .school-notes {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .heading {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-  }
-  
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.notes-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.note-card {
+  background-color: black;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.note-card:hover {
+  transform: scale(1.05);
+}
+
+.note-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.note-content {
+  padding: 20px;
+}
+
+.note-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.note-content h4 {
+  margin: 10px 0 15px 0;
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.note-content p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.note-card-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the parent element's color */
+}
+
+.note-card-link h3,
+.note-card-link h4,
+.note-card-link p {
+  margin: 0;
+}
+
+.note-card-link:hover {
+  text-decoration: none; /* Ensure no underline appears on hover */
+}
+
+.note-card-link:hover .note-card {
+  transform: scale(1.03);
+  box-shadow: 0 8px 12px rgba(248, 247, 247, 0.2);
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
   .notes-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 20px; /* Reduce gap between cards */
   }
-  
+
   .note-card {
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    width: 90%; /* Make cards take 90% of the screen width */
+    max-width: 280px; /* Restrict maximum width */
+    margin: 0 auto; /* Center the card */
+    height: 80;
   }
-  
-  .note-card:hover {
-    transform: scale(1.05);
-  }
-  
+
   .note-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 180px; /* Reduce image height */
   }
-  
+
   .note-content {
-    padding: 20px;
+    padding: 15px; /* Reduce padding */
   }
-  
+
   .note-content h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.25rem; /* Adjust font size */
   }
-  
+
   .note-content h4 {
-    margin: 10px 0 15px 0;
-    font-size: 1.25rem;
-    color: #555;
+    font-size: 1rem; /* Adjust font size */
   }
-  
+
   .note-content p {
-    font-size: 1rem;
-    color: #777;
+    font-size: 0.9rem; /* Adjust font size */
   }
-  
+}

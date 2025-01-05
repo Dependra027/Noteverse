@@ -28,22 +28,21 @@ const SchoolNotes = () => {
   ];
 
   return (
-    <div className="school-notes" id="school-notes"> {/* Add id here */}
-      <h2 className="heading">School Notes <span style={{ color: 'red',fontSize:'20px' }}>( Not operable for now )</span></h2>
+    <div className="school-notes" id="school-notes">
+      <h2 className="heading">School Notes <span style={{ color: 'red', fontSize: '20px' }}><br></br>( Not operable for now )</span></h2>
 
       <div className="notes-container">
         {notes.map((note, index) => (
-          <div key={index} className="note-card">
-            <img src={note.image} alt={note.title} className="note-image" />
-            <div className="note-content">
-              <h3>{note.grade}</h3>
-              <h4>{note.title}</h4>
-              <p>{note.description}</p>
-              {note.link && (
-                <Link to={note.link} className="note-link">View Notes</Link>
-              )}
+          <Link to={note.link} key={index} className="note-card-link">
+            <div className="note-card">
+              <img src={note.image} alt={note.title} className="note-image" />
+              <div className="note-content">
+                <h3>{note.grade}</h3>
+                <h4>{note.title}</h4>
+                <p>{note.description}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
