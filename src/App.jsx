@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import "./index.css"
+import 'font-awesome/css/font-awesome.min.css';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -18,7 +20,7 @@ import TwelfthGradeNotes from './pages/TwelfthGradeNotes';
 import CollegePage from './pages/CollegePage';
 import { getDownloadURL,ref } from 'firebase/storage';
 import Footer from './components/footer';
-import 'font-awesome/css/font-awesome.min.css';
+
 import About from './pages/About';
 import Privacy from './pages/Privacy';
 import Feedback from './pages/FeedBack';
