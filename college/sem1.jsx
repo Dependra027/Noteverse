@@ -1,5 +1,5 @@
 import React from "react";
-import "./Semfirst.css";
+import "./semfirst.css";
 
 const dsaTopics = [
   {
