@@ -8,7 +8,7 @@ const College=()=>{
             name:"Semester 1",
             Description:"Get notes for Sem 1",
            
-            Link:"https://drive.google.com/file/d/1ZH6LyuBcrndxZ0u8V1bCAcTI4k9PIeMa/view?usp=sharing",
+            Link:"/semfirst",
             Image:"https://th.bing.com/th/id/OIP.niBQi-VaG5C8Vne6Uxv1lgHaFQ?w=1024&h=726&rs=1&pid=ImgDetMain",
 
         },

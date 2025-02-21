@@ -21,6 +21,7 @@ import CollegePage from './pages/CollegePage';
 import { getDownloadURL,ref } from 'firebase/storage';
 import Footer from './components/Footer';
 
+import Semfirst from '../college/sem1';
 
 import About from './pages/About';
 import Privacy from './pages/Privacy';
@@ -133,9 +134,11 @@ function App() {
           <Route path="/12th" element={<TwelfthGradeNotes />} />
           <Route path="/upload" element={<UploadNotePage />} />
           <Route path="/Engineering" element={<CollegePage />} />
+
           <Route path="/About" element={<About/>}/>
           <Route path="/Privacy" element={<Privacy/>}/>
           <Route path="/Feedback" element={<Feedback/>}/>
+          <Route path="/semfirst" element={<Semfirst/>}/>
         </Routes>
       </main>
       <Footer />
