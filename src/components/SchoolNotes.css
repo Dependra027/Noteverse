@@ -109,3 +109,12 @@
     font-size: 0.9rem; /* Adjust font size */
   }
 }
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
